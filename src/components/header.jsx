@@ -1,3 +1,6 @@
+import React from 'react';
+import './Header.css'
+import "bootstrap-icons/font/bootstrap-icons.css";
 
 
 
@@ -7,7 +10,8 @@ export default function Header() {
         <div className="header">
         <img className="header-logo" src="src/images/mercatura.png" />
             <div className="header-search">
-                <input className="header searchIn put" type="text" />
+                <input className="header-searchInput" type="text" />
+                <i className="bi bi-search"></i>
             </div>
             <div className="header-nav">
                 <div className="header-option">
@@ -33,6 +37,12 @@ export default function Header() {
                     <span className="header-option-lineTwo">
                      Prime
                     </span>
+                </div>
+                <div className="header-optionBasket">
+                  <i class="bi bi-basket3-fill"></i>
+                 <span className="header-option-lineTwo header-basketCount">
+                    0
+                 </span>
                 </div>
             </div>
 
