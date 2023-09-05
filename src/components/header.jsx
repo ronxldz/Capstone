@@ -39,7 +39,7 @@ export default function Header() {
                     </span>
                 </div>
                 <div className="header-optionBasket">
-                  <i class="bi bi-basket3-fill"></i>
+                  <i className="bi bi-basket3-fill"></i>
                  <span className="header-option-lineTwo header-basketCount">
                     0
                  </span>

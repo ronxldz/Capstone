@@ -1,32 +1,72 @@
+/* Style the product container */
 .product {
     display: flex;
     flex-direction: column;
     background-color: white;
     align-items: center;
-    justify-content: flex-entd;
+    justify-content: center;
     margin: 10px;
     padding: 20px;
-    width: 100%;
-    max-height: 400px; min-width: 100px;
-    z-index: 1;
-
-}
-
-.product > img {
-    max-height: 200px;
-    width: 100%;
+    width: calc(33.33% - 10px); /* For a three-column layout with spacing */
+    margin-bottom: 20px; /* Add bottom margin for spacing between rows */
+    max-height: 400px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease; /* Add a smooth transform transition */
+    text-align: center; /* Center-align text */
+  }
+  
+  /* Style the product on hover */
+  .product:hover {
+    transform: translateY(-5px); /* Add a slight lift on hover */
+  }
+  
+  /* Style the product info section using flex */
+  .product-info {
+    flex: 1;
+    margin-bottom: 15px;
+  }
+  
+  /* Style the product image */
+  .product-image {
+    margin-bottom: 10px; /* Add margin below the image */
+  }
+  
+  .product img {
+    max-height: 150px;
+    width: auto;
     object-fit: contain;
-    margin-bottom: 15px;
-}
-
-.product > button {
-background: white;
-border: 1px solid black;
-margin-top: 10px;
-color: 0#111;
-}
-
-.product-info {
-    height: 100px;
-    margin-bottom: 15px;
-}
+  }
+  
+  /* Style the product price */
+  .product-price {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  
+  /* Style the Add to Cart button */
+  .button {
+    background: black;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .button:hover {
+    background: #333;
+  }
+  
+  @media screen and (max-width: 1024px) {
+    .product {
+      width: calc(50% - 10px); /* For a two-column layout on smaller screens */
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    .product {
+      width: 100%; /* Full width for single-column layout on smaller screens */
+    }
+  }
+  

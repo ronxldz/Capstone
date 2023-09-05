@@ -1,71 +1,71 @@
+/* Header Styles */
 .header {
-    height: 60px;
-    display: flex;
-    align-items: center;
-    background-color: #131921;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-   }
-   
-   .header-logo {
-     width: 50px;
-     object-fit: contain;
-     margin: 0 20px; 
-     margin-top: 18px;
-     margin-bottom: 18px;
-     border: solid white 3px;
-   }
+  height: 60px;
+  display: flex;
+  align-items: center;
+  background-color: #131921;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
 
-   .header-search {
-    display: flex;
-    flex: 1;
-    align-items: center; 
-    border-radius: 24px;
-   }
+.header-logo {
+  width: 50px;
+  object-fit: contain;
+  margin: 0 20px 0 20px;
+  margin: 18px 20px; /* Combined margin for top and bottom */
+  border: solid white 3px;
+}
 
-   .header-searchInput {
-    height: 12px;
-    padding: 10px;
-    border: none;
-    width: 100%;
-   }
+.header-search {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  border-radius: 24px;
+  position: relative; /* Added for icon positioning */
+}
 
-   .bi.bi-search::before {
-    padding: 2px;
-    height: auto;
-    background-color: white;
-   }
+.header-searchInput {
+  height: 100%;
+  padding: 10px;
+  border: none;
+  width: auto; /* Adjusted width */
+  flex: 1; /* Allow the input to grow to take available space */
+  font-size: 14px; /* Adjusted the font size */
+  line-height: 1; /* Explicitly set line-height to match the icon */
+}
 
-   .header-option-lineOne {
-    font-size: 10px;
-   }
+.bi.bi-search::before {
+  font-size: 20px; /* Increased icon size */
+  position: absolute; /* Added for icon positioning */
+  top: 50%; /* Align vertically */
+  right: 10px; /* Position on the right side */
+  transform: translateY(-50%); /* Center vertically */
+  color: black; /* Change the icon color to black for visibility */
+}
 
-   .header-option-lineTwo {
-    font-size: 13px;
-    font-weight: 800;
-   }
+.header-option-lineOne {
+  font-size: 10px;
+}
 
-   .header-optionBasket {
-    display: flex;
-    align-items: center;
-    color: white;
-   }
+.header-option-lineTwo {
+  font-size: 13px;
+  font-weight: 800;
+}
 
-   .header-basketCount {
-    margin-left: 10px;
-    margin-right: 10px;
-   }
+.header-optionBasket,
+.header-option {
+  display: flex;
+  flex-direction: column;
+  margin: 0 10px; /* Margin for left and right */
+  color: white;
+}
 
-   .header-nav {
-    display: flex;
-    justify-content: space-evenly;
-   }
+.header-basketCount {
+  margin: 0 10px; /* Margin for left and right */
+}
 
-    .header-option {
-    display: flex;
-    flex-direction: column; 
-    margin-left: 10px; 
-    margin-right: 10px;
-    color: white;
-   }
+.header-nav {
+  display: flex;
+  justify-content: space-evenly;
+}
