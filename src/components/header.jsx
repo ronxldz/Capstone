@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Header.css'
 import "bootstrap-icons/font/bootstrap-icons.css";
 
@@ -8,7 +9,7 @@ export default function Header() {
     return (
         <>
         <div className="header">
-        <img className="header-logo" src="src/images/mercatura.png" />
+         <Link to="/"><img className="header-logo" src="src/images/mercatura.png" /></Link>
             <div className="header-search">
                 <input className="header-searchInput" type="text" />
                 <i className="bi bi-search"></i>
@@ -38,12 +39,14 @@ export default function Header() {
                      Prime
                     </span>
                 </div>
-                <div className="header-optionBasket">
+                <Link to="/checkout">
+                 <div className="header-optionBasket">
                   <i className="bi bi-basket3-fill"></i>
-                 <span className="header-option-lineTwo header-basketCount">
+                  <span className="header-option-lineTwo header-basketCount">
                     0
-                 </span>
-                </div>
+                  </span>
+                 </div>
+                </Link>
             </div>
 
         </div>
