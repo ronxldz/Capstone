@@ -9,20 +9,22 @@ export default function Subtotal({ basket }) {
         renderText={(value) => (
           <>
             <p>
-              Subtotal ({basket.length} items):
-              <strong>{`${value}`}</strong>
+              Subtotal 0 items:
+              <strong>0</strong>
             </p>
             <small className="subtotal-gift">
-              <input type="checkbox" /> This order contains a gift
+              <input className="input" type="checkbox" /> This order contains a gift
             </small>
           </>
         )}
         decimalScale={2}
-        value={getBasketTotal(basket)} // Assuming you have a function getBasketTotal that calculates the total
+        value={0} // Assuming you have a function getBasketTotal that calculates the total
         displayType={"text"} // Fix: use displayType={"text"} instead of displayType{"text"}
         thousandSeparator={true} // Fix: Correct prop name
         prefix={"$"}
       />
+      
+      <button className="button">Proceed to Checkout</button>
     </div>
   );
 }
